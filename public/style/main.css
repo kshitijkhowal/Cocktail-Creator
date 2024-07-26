@@ -1,0 +1,56 @@
+body {
+    background-image: url("/images/image1.jpg");
+    background-size: cover;
+    z-index: -1;
+}
+
+
+.orbitron-yk {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    grid-column-start: 22;
+    grid-column-end: 33;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+h1 {
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+}
+h1:hover {
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #FFF01F,
+        0 0 0.8rem #FFF01F,
+        0 0 2.8rem #FFF01F,
+        inset 0 0 1.3rem #FFF01F;
+}
+.yk-container{
+    margin-top: 20%;
+}
+a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
