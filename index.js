@@ -25,7 +25,7 @@ app.post("/search",async(req,res)=>{
     try {
         const response = await axios.get(`${API_URL}/search.php?s=${drinkName}`);
         const result = response.data;
-        console.log(result);
+        // console.log(result);
         res.render("search.ejs", { recipies: result });
       } catch (error) {
         console.error("Failed to make request:", error.message);
@@ -34,6 +34,23 @@ app.post("/search",async(req,res)=>{
         });
       }
  
+})
+
+app.post("/recipie",async(req,res)=>{
+    const userPickedDrink=req.body["drink_ID"];
+    console.log(userPickedDrink);
+
+    try {
+        const response = await axios.get(`${API_URL}/lookup.php?i=${userPickedDrink}`);
+        const result = response.data;
+        console.log(result);
+        res.render("recipie.ejs");
+      } catch (error) {
+        console.error("Failed to make request:", error.message);
+        res.render("index.ejs", {
+          error: error.message,
+        });
+      }
 })
 
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/style/search.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Figtree:wght@300;600&amp;display=swap">
 </head>
 
 <body>
@@ -21,6 +22,33 @@
     <script src="js/search.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+    <% if(locals.recipies){ %>
+        <div class="container">
+            <% recipies.drinks.forEach(element=>{ %>
+                <article class="yk_cards">
+                    <div class="article-wrapper">
+                      <figure>
+                        <img src="<%= element.strDrinkThumb %>" alt="" />
+                      </figure>
+                      <div class="article-body">
+                        <h2><%= element.strDrink %></h2>
+                       
+                        <form action="/recipie" method="post">
+                            <button class="yk_button" name="drink_ID" value="<%= element.idDrink %>">
+                                <a  class="read-more">
+                                    Read more <span class="sr-only">about this is some title</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                  </a>
+                            </button>
+                        </form>
+                      </div>
+                    </div>
+                  </article>
+            <% }); %>
+        </div>
+    <% } %>
 </body>
 
 </html>
