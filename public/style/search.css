@@ -274,3 +274,11 @@ img {
   cursor: pointer;
   display: inline-block;
 }
+
+.yk_empty{
+  margin-top: 200px;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
