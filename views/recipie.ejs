@@ -9,10 +9,26 @@
 <body>
     <div class="container">
         <div class="yk_img divs">
+            <h1><%= chosenDrink.drinks[0].strDrink%></h1>
             <img src="<%= chosenDrink.drinks[0].strDrinkThumb %>"/>
         </div>
-        <div class="divs">
-            <h1><%= chosenDrink.drinks[0].strDrink%></h1>
+        <div class="description divs">
+            <h2>Description :</h2>
+            <ul>
+                <li>Category : <%=chosenDrink.drinks[0].strCategory %></li>
+
+                <li>Type : <%=chosenDrink.drinks[0].strAlcoholic %></li>
+                
+            </ul>
+            
+            <h2>Ingredients :</h2>
+            <ul>
+                <% ingredients.forEach((element)=>{%>
+                    <li><%= element %></li>
+                <%}) %>
+            </ul>
+            <h2>Instructions :</h2>
+            <p><%= chosenDrink.drinks[0].strInstructions %></p>
         </div>
     </div>
     

@@ -1,7 +1,9 @@
+
 body {
-    background-image: url("/images/image1.jpg");
-    background-size: cover;
-    z-index: -1;
+  background: url("/images/image1.jpg") no-repeat center center fixed;
+  background-size: cover;
+ 
+  z-index: -1;
 }
 
 

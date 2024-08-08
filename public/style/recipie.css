@@ -6,16 +6,42 @@ body {
   }
 .container{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: auto auto;
     gap: 1rem;
-    /* filter: blur(4px); */
+    
     height:90vh
 }
 .yk_img{
     grid-column-start: 1;
     grid-column-end: 2;
+    display: grid;
     
+    justify-items: center;
 }
 img{
     width: 30rem;
+    /* place-self: center; */
+    align-self: start;
+    opacity: 1;
+    
+
+}
+h1{
+    align-self: start;
+    font-size: 3rem;
+    margin: 0%;
+    padding-top: 1rem;
+
+}
+.divs{
+    background-color: rgba(255, 255, 255, 0.95);
+	 border-radius: 30px;
+	 color: #333;
+	 font-family: sans-serif;
+	 line-height: 1.5;
+	 max-width: 100%;
+	 padding: 1rem 2rem;
+}
+.description{
+    font-size: 1.5rem;
 }
